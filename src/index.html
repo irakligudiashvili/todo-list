@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <form action="" class="form">
+                <label for="title" class="label">Title</label>
+                <input id="title" class="input">
+                <label for="desc" class="label">Task Description</label>
+                <textarea class="input" id="desc" rows="10" cols="50"></textarea>
+                <label for="deadline" class="label">Deadline</label>
+                <input id="deadline" class="input" type="date">
+                <label for="priority" class="label">Priority</label>
+                <select class="input select">
+                    <option value="" disabled selected>Choose priority...</option>
+                    <option value="high">High</option>
+                    <option value="regular">Regular</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <button class="submit-btn">Add Task</button>
+            </form>
+        </div>
+        <div id="content">
+            
+        </div>
+    </div>
+</body>
+</html>
