@@ -13,13 +13,21 @@
 }
 
 .sidebar{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
     width: 500px;
     background-color: var(--primary);
     height: 100vh;
 
+    gap: 20px;
 }
 
 .form{
+    padding-top: 20px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -55,10 +63,13 @@
     padding: 0 10px;
 }
 
-#desc{
+#description{
     height: 200px;
+    max-height: 200px;
     padding: 10px 10px;
     text-indent: 0;
+
+    max-width: 100%;
 }
 
 .select{
@@ -93,6 +104,8 @@
     align-items: center;
 
     padding-top: 25px;
+
+    gap: 30px;
 }
 
 .task-container{
@@ -221,5 +234,79 @@
 }
 
 .delete:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.filter-container{
+    display: flex;
+    flex-direction: row;
+
+    width: 92.5%;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.category-div{
+    font-weight: bold;
+
+
+    padding: 10px 15px;
+    border-style: none;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 20px var(--primary);
+}
+
+.category-div:hover{
+    cursor: pointer;
+}
+
+.category-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.category-subdiv{
+    display: flex;
+}
+
+.category-list{
+    background-color: #fff;
+    min-height: 200px;
+    max-height: 200px;
+    width: 80%;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    overflow-y: scroll;
+}
+
+.category-list-subdiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-delete{
+    background-color: orangered;
+    border-radius: 10px;
+    width: 60px;
+
+    border-style: none;
+    height: 25px;
+}
+
+.category-delete:hover{
     cursor: pointer;
 }

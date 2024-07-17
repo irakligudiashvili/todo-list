@@ -8,31 +8,66 @@
 <body>
     <div class="main">
         <div class="sidebar">
-            <form action="" class="form">
+            <form id="todo-form" class="form">
                 <label for="title" class="label">Title</label>
-                <input id="title" class="input">
-                <label for="desc" class="label">Task Description</label>
-                <textarea class="input" id="desc" rows="10" cols="50"></textarea>
+                <input id="title" class="input" required>
+
+                <label for="description" class="label">Task Description</label>
+                <textarea id="description" class="input" rows="10" cols="50" required></textarea>
+
+                
                 <div class="form-subdiv">
                     <label for="deadline" class="label">Deadline</label>
-                    <input id="deadline" class="input" type="date">
+                    <input id="deadline" class="input" type="date" required>
                 </div>
+
                 <div class="form-subdiv">
                     <label for="priority" class="label">Priority</label>
-                    <select class="input select">
+                    <select id="priority" class="input" required>
                         <option value="" disabled selected>Choose priority...</option>
                         <option value="high">High</option>
                         <option value="regular">Regular</option>
                         <option value="low">Low</option>
                     </select>
                 </div>
+                
+                <div class="form-subdiv">
+                    <label for="category" class="label">Category</label>
+                    <select id="category" class="input select">
+                        <option value="" disabled selected>Choose category...</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
 
-                <button class="submit-btn">Add Task</button>
+                <button type="submit" class="input submit-btn">Add Todo</button>
             </form>
+
+            <div class="category-list">
+                <div class="category-list-subdiv">
+                    <p class="category-title">Category 1</p>
+                    <button class="category-delete">Delete</button>
+                </div>
+            </div>
+
+            <form id="category-form" class="form">
+                <div class="category-subdiv">
+                    <label for="new-category" class="label">Add Category</label>
+                    <input id="new-category" class="input" type="text" required>
+                </div>
+
+                <button type="submit" class="input submit-btn">Add Category</button>
+            </form>
+            
         </div>
         <div id="content">
+            <div class="filter-container">
+                <div class="category-div" id="all">
+                    <p>All</p>
+                </div>
+            </div>
             <div class="todo-container">
-                <div class="task-container">
+                <div class="todo-container" id="todo-container"></div>
+                <!-- <div class="task-container">
                     <p class="todo-title">Task 1</p>
                     <div class="todo-subdiv">
                         <div class="priority-subdiv">
@@ -51,9 +86,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="description-container">
+                <div class="description-container hidden">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in soluta dolorum, saepe eveniet laboriosam dolor repellat, officiis a facere beatae tenetur! Excepturi molestias est officiis beatae alias facilis nesciunt mollitia impedit, quidem veritatis temporibus consequatur magnam rerum. Quidem corrupti voluptatem, eius amet deleniti sed vero expedita! Dignissimos, ratione tempore?</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
