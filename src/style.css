@@ -112,7 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
 
     padding: 15px;
     border-style: none;
@@ -144,7 +144,7 @@
     border-radius: 0 0 10px 10px;
 
     box-shadow: 0px 20px 30px var(--primary);
-    width: 90%;
+    width: 80%;
 
     z-index: 2;
     background-color: #f6fdfd;
@@ -176,16 +176,16 @@
     cursor: pointer;
 }
 
-.red{
+.high{
     background-color: red;
 }
 
-.orange{
+.regular{
     background-color: orange;
 }
 
-.yellow{
-    background-color: yellow;
+.low{
+    background-color: greenyellow;
 }
 
 .todo-subdiv{
@@ -213,6 +213,8 @@
     display: flex;
     gap: 10px;
 
+    min-width: 170px;
+
     align-items: center;
 }
 
@@ -225,7 +227,7 @@
     color: green;
 }
 
-.delete{
+.delete-task{
     color: orangered;
 }
 
@@ -233,7 +235,7 @@
     cursor: pointer;
 }
 
-.delete:hover{
+.delete-task:hover{
     cursor: pointer;
 }
 
@@ -309,4 +311,30 @@
 
 .category-delete:hover{
     cursor: pointer;
+}
+
+.description-text{
+    word-wrap:break-word;
+}
+
+#all-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.task-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.completed{
+    opacity: 50%;
 }
